@@ -6,21 +6,21 @@ vendor/lib/libbt-vendor.so
 etc/bluetooth/bt_stack.conf
 
 # Camera
-lib/hw/camera.universal7870.so:lib/hw/camera.vendor.universal7870.so
-lib/libexynoscamera.so
-lib/libexynoscamera3.so
-lib/libseccameracore.so
-lib/libuniplugin.so
-lib/libhwjpeg.so
-lib/libexynosutils.so
-lib/libcsc.so
-lib/libexynosgscaler.so
-lib/libexynosscaler.so
-lib/libexynosv4l2.so
-lib/libstainkiller.so
-lib/libHpr_RecFace_dl_v1.0.so
-lib/libHpr_RecGAE_cvFeature_v1.0.so
-lib/libHpr_TaskFaceClustering_hierarchical_v1.0.so
+lib/hw/camera.universal7870.so::vendor/lib/hw/camera.vendor.universal7870.so
+lib/libexynoscamera.so:vendor/lib/libexynoscamera.so
+lib/libexynoscamera3.so:vendor/lib/libexynoscamera3.so
+lib/libseccameracore.so:vendor/lib/libseccameracore.so
+lib/libuniplugin.so:vendor/lib/libuniplugin.so
+lib/libhwjpeg.so:vendor/lib/libhwjpeg.so
+lib/libexynosutils.so:vendor/lib/libexynosutils.so
+lib/libcsc.so:vendor/lib/libcsc.so
+lib/libexynosgscaler.so:vendor/lib/libexynosgscaler.so
+lib/libexynosscaler.so:vendor/lib/libexynosscaler.so
+lib/libexynosv4l2.so:vendor/lib/libexynosv4l2.so
+lib/libstainkiller.so:vendor/lib/libstainkiller.so
+lib/libHpr_RecFace_dl_v1.0.so:vendor/lib/libHpr_RecFace_dl_v1.0.so
+lib/libHpr_RecGAE_cvFeature_v1.0.so:vendor/lib/libHpr_RecGAE_cvFeature_v1.0.so
+lib/libHpr_TaskFaceClustering_hierarchical_v1.0.so:vendor/lib/libHpr_TaskFaceClustering_hierarchical_v1.0.so
 vendor/firmware/setfile_4h5yc.bin
 vendor/firmware/setfile_imx258.bin
 vendor/lib/libOpenCv.so:lib/libOpenCv.so
