@@ -28,7 +28,8 @@ LOCAL_PATH := device/samsung/on7xelte
 BOARD_SEPOLICY_DIRS += device/samsung/on7xelte/sepolicy
 
 # Properties
-TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+TARGET_VENDOR_PROP += $(LOCAL_PATH)/vendor.prop
 
 # Inherit from the proprietary version
 -include vendor/samsung/on7xelte/BoardConfigVendor.mk
