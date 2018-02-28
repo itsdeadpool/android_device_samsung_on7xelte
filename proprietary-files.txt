@@ -1,9 +1,8 @@
 #Bluetooth
-bin/prepare_param.sh
+bin/prepare_param.sh:vendor/bin/prepare_param.sh
 vendor/firmware/bcm4343A0_V0071.0262.hcd
 vendor/firmware/bcm43438A1_V0062.0267.hcd
 vendor/lib/libbt-vendor.so
-etc/bluetooth/bt_stack.conf
 
 # Camera
 lib/hw/camera.universal7870.so::vendor/lib/hw/camera.vendor.universal7870.so
@@ -21,28 +20,28 @@ lib/libstainkiller.so:vendor/lib/libstainkiller.so
 lib/libHpr_RecFace_dl_v1.0.so:vendor/lib/libHpr_RecFace_dl_v1.0.so
 lib/libHpr_RecGAE_cvFeature_v1.0.so:vendor/lib/libHpr_RecGAE_cvFeature_v1.0.so
 lib/libHpr_TaskFaceClustering_hierarchical_v1.0.so:vendor/lib/libHpr_TaskFaceClustering_hierarchical_v1.0.so
+vendor/lib/libOpenCv.so
+vendor/lib/libHpr_LocLandmark_sdm_v1.0.so
+vendor/lib/libsomp.so
+vendor/lib/libHpr_LocFace_mvfd_v1.0.so
 vendor/firmware/setfile_4h5yc.bin
 vendor/firmware/setfile_imx258.bin
-vendor/lib/libOpenCv.so:lib/libOpenCv.so
-vendor/lib/libHpr_LocLandmark_sdm_v1.0.so
-vendor/lib/libsomp.so:lib/libsomp.so
-vendor/lib/libHpr_LocFace_mvfd_v1.0.so
 
 # DRM
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
 
 # Fingerprint
-lib/libbauthserver.so
-lib/libbauthtzcommon.so
-lib/libegis_fp_normal_sensor_test.so
-lib/libsynaFpSensorTestNwd.so
+lib/libbauthserver.so:vendor/lib/libbauthserver.so
+lib/libbauthtzcommon.so:vendor/lib/libbauthtzcommon.so
+lib/libegis_fp_normal_sensor_test.so:vendor/lib/libegis_fp_normal_sensor_test.so
+lib/libsynaFpSensorTestNwd.so:vendor/lib/libsynaFpSensorTestNwd.so
 
 # GPS
-bin/gpsd
-etc/ca.pem
-lib/hw/gps.default.so
-lib/libfloatingfeature.so
-lib/libwrappergps.so
+bin/gpsd:vendor/bin/gpsd
+etc/ca.pem:vendor/etc/ca.pem
+lib/hw/gps.default.so:vendor/lib/hw/gps.default.so
+lib/libfloatingfeature.so:vendor/lib/libfloatingfeature.so
+lib/libwrappergps.so:vendor/lib/libwrappergps.so
 vendor/lib/hw/flp.default.so
 vendor/lib/libflp.so
 
@@ -52,64 +51,41 @@ vendor/firmware/fimc_is_lib.bin
 vendor/firmware/mfc_fw.bin
 
 # Mobicore
-bin/mcDriverDaemon|616bd552fbbd56bd05cfe3441e27de92565854fc
-app/FFFFFFFF000000000000000000000001.drbin
-app/mcRegistry/00060308060501020000000000000000.tlbin
-app/mcRegistry/07010000000000000000000000000000.tlbin
-app/mcRegistry/07060000000000000000000000000000.tlbin
-app/mcRegistry/08130000000000000000000000000000.tlbin
-app/mcRegistry/ffffffff00000000000000000000000b.tlbin
-app/mcRegistry/ffffffff00000000000000000000000c.tlbin
-app/mcRegistry/ffffffff00000000000000000000000d.tlbin
-app/mcRegistry/ffffffff00000000000000000000000f.tlbin
-app/mcRegistry/ffffffff00000000000000000000002e.tlbin
-app/mcRegistry/ffffffff00000000000000000000001f.tlbin
-app/mcRegistry/ffffffff000000000000000000000004.tlbin
-app/mcRegistry/ffffffff000000000000000000000005.tlbin
-app/mcRegistry/ffffffff000000000000000000000012.tlbin
-app/mcRegistry/ffffffff000000000000000000000013.tlbin
-app/mcRegistry/ffffffff000000000000000000000016.tlbin
-app/mcRegistry/ffffffff000000000000000000000017.tlbin
-app/mcRegistry/ffffffff000000000000000000000019.tlbin
-app/mcRegistry/ffffffff000000000000000000000041.tlbin
-app/mcRegistry/ffffffff000000000000000000000045.tlbin
-app/mcRegistry/ffffffff00000000000000000000000a.tlbin
-app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
-app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
-app/mcRegistry/ffffffffd00000000000000000000004.tlbin
-app/mcRegistry/ffffffffd00000000000000000000016.tlbin
-app/mcRegistry/fffffffff0000000000000000000001e.tlbin
-vendor/lib/libMcClient.so:lib/libMcClient.so|6e20b880efa7e430beacaacd9b2721ed22398478
-vendor/lib/libMcRegistry.so:lib/libMcRegistry.so
+bin/mcDriverDaemon:vendor/bin/mcDriverDaemon|616bd552fbbd56bd05cfe3441e27de92565854fc
+app/FFFFFFFF000000000000000000000001.drbin:vendor/app/FFFFFFFF000000000000000000000001.drbin
+app/mcRegistry/ffffffffd00000000000000000000016.tlbin:vendor/app/mcRegistry/ffffffffd00000000000000000000016.tlbin
+app/mcRegistry/ffffffffd0000000000000000000000a.tlbin:vendor/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
+vendor/lib/libMcClient.so|6e20b880efa7e430beacaacd9b2721ed22398478
+vendor/lib/libMcRegistry.so
 
 # Radio
-lib/libsec-ril.so|09f007ba0fd0a66b98ccd4c4b8275c703a6a6804
-lib/libsec-ril-dsds.so|baf6ac2e770b0456ad1ad3906c92a4deebd11040
-lib/libsecril-client.so
-lib/libaudio-ril.so
-lib/libreference-ril.so
-lib/librilutils.so
-lib/libsecnativefeature.so
+lib/libsec-ril.so:vendor/lib/libsec-ril.so|09f007ba0fd0a66b98ccd4c4b8275c703a6a6804
+lib/libsec-ril-dsds.so:vendor/lib/libsec-ril-dsds.so|baf6ac2e770b0456ad1ad3906c92a4deebd11040
+lib/libsecril-client.so:vendor/lib/libsecril-client.so
+lib/libaudio-ril.so:vendor/lib/libaudio-ril.so
+lib/libreference-ril.so:vendor/lib/libreference-ril.so
+lib/librilutils.so:vendor/lib/librilutils.so
+lib/libsecnativefeature.so:vendor/lib/libsecnativefeature.so
 
 # Sensors
-lib/hw/sensors.universal7870.so
-lib/libsensorservice.so
-lib/libsensorlistener.so
+lib/hw/sensors.universal7870.so:vendor/lib/hw/sensors.universal7870.so
+lib/libsensorservice.so:vendor/lib/libsensorservice.so
+lib/libsensorlistener.so:vendor/lib/libsensorlistener.so
 
 # Shim Libs
-lib/libprotobuf-cpp-N.so|f8b1e1d088cd4707393a1fad233f8b06116bc666
-lib/libprotobuf-cpp-fooo.so|5890f0daae5933210aa6b114bafc52ee7e809864
+lib/libprotobuf-cpp-N.so:vendor/lib/libprotobuf-cpp-N.so|f8b1e1d088cd4707393a1fad233f8b06116bc666
+lib/libprotobuf-cpp-fooo.so:vendor/lib/libprotobuf-cpp-fooo.so|5890f0daae5933210aa6b114bafc52ee7e809864
 
 # Surface Composer
-lib/hw/gralloc.exynos5.so
+lib/hw/gralloc.exynos5.so:vendor/lib/hw/gralloc.exynos5.so
 
 # Wifi
-etc/plmn_delta.bin
-etc/plmn_se13.bin
-etc/srm.bin
-etc/wifi/bcmdhd_apsta.bin
-etc/wifi/bcmdhd_mfg.bin
-etc/wifi/bcmdhd_sta.bin
-etc/wifi/cred.conf
-etc/wifi/nvram_mfg.txt
-etc/wifi/nvram_net.txt
+etc/plmn_delta.bin:vendor/etc/plmn_delta.bin
+etc/plmn_se13.bin:vendor/etc/plmn_se13.bin
+etc/srm.bin:vendor/etc/srm.bin
+etc/wifi/bcmdhd_apsta.bin:vendor/etc/wifi/bcmdhd_apsta.bin
+etc/wifi/bcmdhd_mfg.bin:vendor/etc/wifi/bcmdhd_mfg.bin
+etc/wifi/bcmdhd_sta.bin:vendor/etc/wifi/bcmdhd_sta.bin
+etc/wifi/cred.conf:vendor/etc/wifi/cred.conf
+etc/wifi/nvram_mfg.txt:vendor/etc/wifi/nvram_mfg.txt
+etc/wifi/nvram_net.txt:vendor/etc/wifi/nvram_net.txt
